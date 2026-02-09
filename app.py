@@ -3,10 +3,10 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 @app.route('/analyze', methods=['POST'])
-def analyze_data():
-    data = request.get_json()
-    # Placeholder for analysis logic
-    # For example, process and analyze the data
+def analyze():
+    data = request.json
+    # Implement DCP analysis logic here
+    # Example response
     result = {'status': 'success', 'data': data}
     return jsonify(result)
 
